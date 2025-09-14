@@ -1,1 +1,64 @@
 /* Add your CSS here */
+
+/* Styling for main body of the webpage*/
+body {
+  background-color: #f0f0f0;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the timeline container */
+.timeline {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 16px 0;
+  max-width: 1156px;
+  margin: 0 auto;
+}
+
+/* Styling for each card in the timeline */
+.timeline-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* rounded corners */
+  box-sizing: border-box;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  width: 275px;
+  height: 275px;
+  flex: 0 0 auto;
+  position: relative; /* For positioning hover state */
+}
+
+/* Card hover state styling */
+.card-hover-state {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 80, 142, 0.95); /* Intel blue with transparency */
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: left;
+}
+
+/* Hover controls for the cards */
+.timeline-card:hover .card-hover-state {
+  display: block; /* Show overlay on hover */
+}
+
+/* Media query for making the timeline responsive */
+@media (max-width: 600px) {
+  .timeline {
+    flex-direction: column;
+  }
+  
+  .timeline-card {
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+}

@@ -16,7 +16,6 @@ body {
 }
 
 /* Hero section styling */
-/* Make the blue hero section fill the entire width with no rounded edges */
 .hero {
   display: flex;
   align-items: center;
@@ -43,7 +42,7 @@ body {
   height: 100%;
   width: 400px;
   margin-right: 40px;
-  padding: 0 50px;
+  padding: 0 75px;
   box-sizing: border-box;
   border-radius: 0; /* No rounded edges */
 }
@@ -64,7 +63,8 @@ body {
 /* Hero paragraph text styling */
 .hero-text p {
   font-size: 1.4em;
-  margin-bottom: 0;
+  margin-bottom: 24px;
+  max-width: 800px;
 }
 
 /* Responsive: stack logo above text on small screens */
@@ -89,14 +89,23 @@ body {
     box-sizing: border-box;
     border-radius: 0; /* No rounded edges */
   }
+  .hero-text {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .hero img {
     width: 175px;
     margin-right: 0;
     margin-bottom: 16px;
   }
   .hero-text h1 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.4em;
+    margin-bottom: 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     word-break: break-word;
   }
   .hero-text p {
@@ -113,8 +122,9 @@ body {
   gap: 16px;
   overflow-x: auto;
   padding: 16px 32px; /* Add left and right padding for hover space */
-  max-width: 1064px;
+  max-width: 1000px;
   margin: 0 auto;
+  scroll-snap-type: x mandatory;
 }
 
 /* Styling for each card in the timeline */
@@ -129,6 +139,7 @@ body {
   flex: 0 0 auto;
   position: relative; /* For positioning hover state */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  scroll-snap-align: start;
 }
 
 /*Styling for images within the timeline cards */

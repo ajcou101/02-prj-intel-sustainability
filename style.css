@@ -20,7 +20,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0072c6; /* Intel blue */
+  /* Subtle Intel blue gradient background */
+  background: linear-gradient(270deg, #0072c6 0%, #0072c6 30%, #00aee7 100%);
   color: #ffffff;
   width: 100vw; /* Fill the viewport width */
   min-width: 100vw;

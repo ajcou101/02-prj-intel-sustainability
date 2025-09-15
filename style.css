@@ -124,7 +124,7 @@ body {
   overflow-x: auto;
   padding: 16px 32px; /* Add left and right padding for hover space */
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 16px auto 0 auto;
   scroll-snap-type: x mandatory;
 }
 

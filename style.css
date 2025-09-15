@@ -7,6 +7,87 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Hero section styling */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 32px;
+  background-color: #0072c6;
+  color: #ffffff;
+  width: 100vw;
+  min-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  height: 400px;
+  padding: 0 32px;
+}
+
+/* Logo container for dark background */
+.logo-bg {
+  background-color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 400px;
+  margin-right: 40px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+/* Hero image styling */
+.hero img {
+  width: 240px;
+  height: auto;
+}
+
+/* Hero header text styling */
+.hero-text h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+/* Hero paragraph text styling */
+.hero-text p {
+  font-size: 1.4em;
+  margin-bottom: 0;
+}
+
+/* Responsive: stack logo above text on small screens */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 32px 12px;
+  }
+  .logo-bg {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 180px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .hero img {
+    width: 175px;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .hero-text h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+  .hero-text p {
+    font-size: 1em;
+    padding: 0 4px;
+    word-break: break-word;
+  }
+}
+
 /* Styling for the timeline container */
 .timeline {
   display: flex;
@@ -24,18 +105,30 @@ body {
   border-radius: 8px; /* rounded corners */
   box-sizing: border-box;
   padding: 16px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  width: 275px;
-  height: 275px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 250px;
+  height: 250px;
   flex: 0 0 auto;
   position: relative; /* For positioning hover state */
+}
+
+/*Styling for images within the timeline cards */
+.timeline-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: block;
 }
 
 /* Card hover state styling */
 .card-hover-state {
   display: none; /* Hide by default */
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 80, 142, 0.95); /* Intel blue with transparency */
   color: #fff;
   padding: 16px;
@@ -55,10 +148,16 @@ body {
   .timeline {
     flex-direction: column;
   }
-  
+
   .timeline-card {
     width: 100%;
     aspect-ratio: 1/1;
     height: auto;
   }
+}
+
+/* Styling for the text below the timeline */
+body > p {
+  text-align: center;
+  margin-top: 16px;
 }
